@@ -93,11 +93,18 @@
     list-style: none;
     margin-left: auto;
     align-items: center;
+    text-decoration: none;
     
+}
+
+.login-nav-bar li a {
+    color: white;           
+    text-decoration: none;                   
 }
 
 .login-nav-bar li {
     margin: 0 10px; /* Optional: Add some space between the list items */
+  
   }
 
 
