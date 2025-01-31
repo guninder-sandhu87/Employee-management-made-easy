@@ -40,12 +40,13 @@
     border-style:ridge;
     border-color: rgba(0, 0, 0, 0.229);
     border-radius: 5px;
-    background-color:rgb(255, 255, 255)  ;
+    background-color:rgba(15, 23, 42, 0.73);   
     height: 40vh;
     width: 30vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: whitesmoke;
 }
 
 .login_header{
@@ -55,6 +56,11 @@
     height:10vh;
     justify-content: space-between;
 
+}
+
+.login-form a{
+    text-decoration: none;
+    color: wheat;
 }
 
 .login_footer{
@@ -120,6 +126,7 @@
     flex-direction: column;
     max-width: inherit;
     align-items: center;
+    width:80%;
     
   }
 
@@ -130,6 +137,33 @@
     border-radius: 5px;
     border-color: rgba(0, 0, 0, 0.226);
   }
+
+  .register{
+    display: flex;
+    justify-content: center;
+}
+
+.register-section{
+min-height:fit-content;
+display: flex;
+flex-direction: column;
+background-color:rgba(15, 23, 42, 0.73);  ; 
+justify-content: center;
+align-items: center;
+width: 70%;
+height: 80%;
+border-radius: 10px;
+border-style: double;
+color:whitesmoke;
+}
+
+.reg-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 50vw;
+}
 
 
   @media (width <= 700px) {
@@ -157,13 +191,24 @@
         justify-content: center;
     }
 
-    .form{
-        width: 80vw;
-    }
-    .input-text{
+    .register-section{
+        height: 40vh;
         width: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
     }
 
+    .form{
+        width: 80%;
+    }
+    .input-text{
+        width: 100%;
+    }
+
+    .reg-body {
+        width: 90%;
+    }
 
   }
 
