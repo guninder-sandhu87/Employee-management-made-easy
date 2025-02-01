@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar {
+    display: flex;
+    background-color: rgb(15, 23, 42);
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 8%;
+    align-items: center;
+
+}
+
+.below-nav-bar {
+    display: flex;
+    height: 84%;
+    width: inherit
+}
+
+.search-bar {
+
+    height: 50%;
+    width: 30%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.logo-image {
+    background-color: beige;
+    margin: 1vh;
+    border-radius: 50%;
+    width: 5vw;
+    /* 10% of the viewport width */
+    height: 100%;
+}
+
+.side-bar {
+
+    height: 90vh;
+    width: 10%;
+    min-width: fit-content;
+    /* display: flex; */
+    flex-direction: column;
+    background-color: rgba(15, 23, 42, 0.977);
+    display: none;
+
+}
+
+.side-bar a {
+    text-decoration: none;
+    color: whitesmoke;
+
+    margin-bottom: 1vh;
+    padding: 1vh;
+
+}
+
+.side-bar a:hover {
+    text-decoration: none;
+    color:  rgb(15, 23, 42);
+    background-color: rgb(233, 225, 230);
+    padding: 1vh;
+    margin-bottom: 1vh;
+
+}
+
+.greeting{
+    display: flex;
+    flex-direction: column;
+}
+
+#welcome-section p {
+    display: block;
+    margin-top: 10px; /* Adds space */
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: whitesmoke;
+    margin-right: 2vw;
+
+}
+
+.section {
+    background-color: whitesmoke;
+    height: 90vh;
+    width: 100%;
+    min-width: fit-content;
+}
+
+.login_footer {
+    background-color: rgb(15, 23, 42);
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    justify-content: center;
+    color: white;
+    align-items: center;
+
+}
+
+.login_footer p {
+    color: white;
+}
+
+.emp-image {
+    margin: 2vh;
+    height: 15vh;
+    min-height: 5vh;
+    border-radius: 5px;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(189, 187, 187, 0.203);
+
+}
+
+.welcome-section h2 {
+    font-family: "Arimo", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: x-large;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+}
+
+.open-nav-button {
+    height: 4vh;
+    width: 2vw;
+}
+
+
+.display-section{
+    display: flex;
+    flex-direction: column;
+    margin-top:5vh;
+}
+
+.display-section h3{
+    font-family: "Arimo", serif;
+    align-self: center;
+}
+
+.tableEmployess{
+    display: flex;
+}
+
+.tableEmployess table{
+    table-layout: auto;
+    width: 100vw;
+}
+
+.tableEmployess table,th, td{
+   
+        border: 1px solid black;
+        border-collapse: collapse;
+       
+   
+   
+}
