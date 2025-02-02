@@ -57,10 +57,38 @@ function getGreeting() {
     return greeting;
 }
 
-// Display the greeting when the page loads
-window.onload = function () {
-    document.getElementById("greeting-message").innerText = getGreeting();
-};
+
+
+function toggleDropdown() {
+    const select = document.getElementById('multiSelectproject');
+    select.style.display = select.style.display === "block" ? "none" : "block";
+}
+
+function toggleDropdownDept() {
+    const select = document.getElementById('multiSelectdepartment');
+    select.style.display = select.style.display === "block" ? "none" : "block";
+}
+
+
+
+function updatePlaceholder() {
+    const select = document.getElementById('multiSelectproject');
+    const selectedText = document.querySelector(".selected-text");
+
+    let selectedOptions = Array.from(select.selectedOptions).map(opt => opt.textContent);
+    selectedText.textContent = selectedOptions.length ? selectedOptions.join(", ") : "Select one";
+}
+
+
+
+
+function updateDeptPlaceholder() {
+    const select = document.getElementById('multiSelectdepartment');
+    const selectedText = document.querySelector(".selected-text");
+
+    let selectedOptions = Array.from(select.selectedOptions).map(opt => opt.textContent);
+    selectedText.textContent = selectedOptions.length ? selectedOptions.join(", ") : "Select one";
+}
 
 
 
