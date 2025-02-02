@@ -264,7 +264,7 @@ body {
 }
 
 .custom-dropdown .selected-text {
-    rgb(15, 23, 42);
+    color:rgb(15, 23, 42);
 }
 
 .dropdown-list {
@@ -282,11 +282,6 @@ body {
     padding: 8px;
     cursor: pointer;
 }
-
-.dropdown-list option:hover {
-   
-}
-
 
 .form-group-1{
     display: flex;
