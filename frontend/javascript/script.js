@@ -90,6 +90,60 @@ function updateDeptPlaceholder() {
     selectedText.textContent = selectedOptions.length ? selectedOptions.join(", ") : "Select one";
 }
 
+document.getElementById("address").addEventListener("input",fetchLocation);
+
+
+let locationApiTimer;
+async function fetchLocation(){
+    clearTimeout(locationApiTimer);
+    locationApiTimer = setTimeout(async () =>{
+        const addressValue=document.getElementById("address").value;
+    const suggestion=document.getElementById("suggestions");
+    suggestion.innerHTML = "";
+
+    const apikey="pk.2f7e446528c0ab98b7f292b4dcdf3cf1";
+    if(addressValue.length<6){
+        suggestion.style.display = 'none';
+        return;
+    }
+        
+    const url= `https://api.locationiq.com/v1/autocomplete?key=${apikey}&q=${encodeURIComponent(addressValue)}&countrycodes=AU&dedupe=1&format=json`;
+   
+    console.log("trying...");
+    try {
+        console.log("entered...");
+        let response = await fetch(url);
+        if (!response.ok) throw new Error(`API Error: ${response.status}`);
+        let data = await response.json();
+        console.log(data); // Process results here
+        if (data.length > 0) {
+            suggestion.style.display = 'block';
+        } else {
+            suggestion.style.display = 'none'; // Hide dropdown if no results
+        }
+        data.forEach(element => {
+            console.log(element.display_name);
+            const li = document.createElement("li");
+            li.textContent = element.display_name;
+            li.onclick = () => {
+                document.getElementById("address").value = element.display_name;
+                document.getElementById("street").value = element.address.house_number+" "+element.address.road; 
+                document.getElementById("city").value = element.address.city; 
+                document.getElementById("pincode").value = element.address.postcode; 
+                document.getElementById("state").value = element.address.state; 
+                suggestion.style.display = 'none'; // Hide dropdown after selection
+            };
+            suggestion.appendChild(li);
+
+        });
+    } catch (error) {
+        console.error("Error fetching location:", error);
+    }
+
+    },500);
+
+}
+
 
 
 

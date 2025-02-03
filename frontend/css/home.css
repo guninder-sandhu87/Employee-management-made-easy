@@ -323,3 +323,45 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+#address-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+#address {
+    /* width: 300px;
+    padding: 8px;
+    font-size: 16px; */
+    flex-grow: 1; /* Ensure the input takes the remaining space */
+    padding: 8px;
+    font-size: 16px;
+    position: relative;
+}
+
+
+#suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: white;
+    z-index: 9999; /* Ensure suggestions are above other content */
+    display: none; /* Hidden by default */
+    position: absolute; /* Position the dropdown below the input */
+    top: 100%; /* Place the dropdown directly below the input */
+    left: 0;
+    width: 100%; /* Match the width of the input */
+}
+
+#suggestions li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#suggestions li:hover {
+    background-color: #f0f0f0;
+}
